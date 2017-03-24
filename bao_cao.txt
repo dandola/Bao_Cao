@@ -1,7 +1,7 @@
 I. giới thiệu qua về python
 - python là một ngôn ngữ lập trình bậc cao, hướng đối tượng, học python khá là đơn giản và dễ dàng.
 - python là một ngôn ngữ thông dịch, tức là khi mình code đến đâu, thì nó dịch đến đó, như vậy thì việc debug phát hiện ra lỗi dễ dàng hơn, kết quả cũng được hiển thị ra ngay sau khi code.
-- cú pháp của python tương đối dễ dàng để học, và dễ dàng hơn khi bạn đã học ngôn ngữ C,C++
+- cú pháp của python tương đối dễ dàng để học, và dễ dàng hơn khi bạn đã học ngôn ngữ C,C++,OOP
 II. những gì đã được học trong thời gian qua.
 - do trước đây em đã học C,C++,JAVA nên các vấn đề cơ bản em sẽ không đề cập đến, em chỉ đưa ra những vấn đề mới chỉ có trong python mà em chưa được học, cũng như các vấn đề cần lưu ý:
 1.các kiểu dữ liệu: 
@@ -42,7 +42,7 @@ vd:	dict={'name': 'Nguyen Van Dan','age':20, 'gender': 'male'}
 	+ từ khóa def được sử dụng để xác định phần bắt đầu của 1 hàm.
 	+ theo sau def là ten_ham, theo sau ten_ham là dấu ():
 	+ trong cặp dấu là các tham số (có thể có hoặc không).
-	+ để định nghĩa các câu lệnh trong 1 hàm, các câu lệnh bên trong được thụt dòng với một 	  space nào đó
+	+ để định nghĩa các câu lệnh trong 1 hàm, các câu lệnh bên trong được thụt dòng với một 	  space nào 	      đó
 	+ dòng đầu tiên trong thâm hàm là 1 Documentation string (có thể có hoặc không)
 vd: 	def myfunction():
 		"this is documentation string"
