@@ -21,13 +21,12 @@ vd:
 ```
 ví dụ trên là mô phỏng quá trình hoạt động của car, trong đó car có 2 hoạt động chính là parking và driving, với mỗi hoạt động parking( or driving), nó sẽ sinh ra một `timeout` cho từng hoạt động đó, sau khoảng thời gian `timeout`, nó đưa ra một tin nhắn và thời gian mô phỏng hiện tại thông qua `env.now()`.
     
-  Như vậy để bắt đầu thực hiện, đầu tiên cần phải tạo ra một môi trường (`env=simpy.Environment()`). sau khi tạo ra mội môi trường, để có thể bắt đầu thực hiện mô phỏng trong môi trường đó,cần phải được thêm vào trong môi trường thông qua `Environment.process()`
+  Như vậy để bắt đầu thực hiện, đầu tiên cần phải tạo ra một môi trường (`env=simpy.Environment()`). sau khi tạo ra mội môi trường, để có thể bắt đầu thực hiện mô phỏng trong môi trường đó và cần phải được thêm vào trong môi trường thông qua `Environment.process()`
 
   và cuối cùng quá trình mô phỏng được bắt đầu với câu lệnh `env.run(until=15)` với  `until=15` là khoảng thời gian mô phỏng.
 # b. tiến trình tương tác
 giữa hai tiến trình có thể có sự tương tác với nhau
 có hai cách biểu diễn sự tương tác giữa các tiến trình:
-
         + tiến trình  này chờ đợi một tiến trình khác kết thúc
         + tiến trình này có thể làm gián đoạn tiến trình khác.
 ## **chờ đợi một tiến trình** 
@@ -65,7 +64,7 @@ ví dụ trên mô phỏng việc một đối tượng car có thể thực hi�
 giả sử rằng khi chương trình chạy thì đối tượng car sẽ thực hiện thao tác `charge()` đầu tiên, thông thường car sẽ được nạp pin đầy thì hoạt động `driving` mới được thực hiện.   
 simpy cho phép bạn có thể làm gián đoạn(interrup) 1 tiến trình khi nó đang chạy bằng câu lệnh `interrupt()`.   
 như vậy giả sử rằng khi car đang thực hiện `charging` với thời gian là 5p mới có thể đầy pin, nếu bạn muốn thực hiện `driving` khi mà công việc `charging`(sạc điện) chưa hoàn thành, bạn có thể sử dụng `interrupt` để có thể ngắt nó.   
-Kết quả là trước đây bạn phải mất  thời gian là 5p để `charging` mới có thể thực hiện `driving` thì bây giờ bạn có thể bắt đầu `driving` khi mà `charging` vẫn chưa hoàn thành.
+Kết quả là trước đây bạn phải mất thời gian là 5p để `charging` mới có thể thực hiện `driving` thì bây giờ bạn có thể bắt đầu `driving` khi mà `charging` vẫn chưa hoàn thành.
 ### c. chia sẻ tài nguyên
 ```sh
 >>> import simpy
