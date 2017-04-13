@@ -3,7 +3,7 @@
 ### a. các khái niệm cơ bản
  - simpy là một thư viện mô phỏng các sự kiện rời rạc. hành vi của các thành phần hoạt đọng được mô hình bằng các tiến trình. tất cả các tiến trình nằm trong cùng một môi trường (env). chúng tương tác với môi trường và với nhau qua các sự kiện.
  - khi tạo ra một tiến trình, tiến trình sẽ bị tạm dừng. Simpy tiếp tục xử lý, khi sự kiện xảy ra (sự kiện được kích hoạt).Nhiều tiến trình có thể chờ đợi cùng một sự kiện. Simpy tiếp tục chúng theo thứ tự mà chúng đã tạo ra sự kiện đó.
-- có một loại sự kiện quan trọng là `Timeout`. sự kiện này cho phép một tiến trình tạm ngưng trong một khoảng thời gian cho phép và được gọi bằng cú pháp  `env.timeout(time)` trong đó `env` là biến được khởi tạo bởi môi trường (`Environment`), `time` là thời gian mà tạm ngưng của một trạng thái nào đó.
+- có một loại sự kiện quan trọng là `Timeout`. sự kiện này cho phép một tiến trình tạm ngưng trong một khoảng thời gian cho phép và được gọi bằng cú pháp  `env.timeout(time)` trong đó `env` là biến được khởi tạo bởi môi trường (`simpy.Environment()`), `time` là khoảng thời gian mà tạm ngưng của một trạng thái nào đó.
 ```sh 
 vd: 
 >>> import simpy
